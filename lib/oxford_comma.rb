@@ -4,9 +4,7 @@ if array.length == 1
 elsif array.length == 2
   return array.join(" and ")
 else array.length >= 3
-  three_or_more = "and #{array[-1]}"
-  array.pop
-  array.push(three_or_more)
+  array[-1].prepend " and "
   return array.join(" , ")
   end
 end
